@@ -27,9 +27,9 @@ const pushIntoSecond = (arr) => {
 // 
 // Return an array of scores that have had the bonus points added.
 // ------------------------------------------------------------------------------------------------
-let newNums = [];
 
 const addBonusPoints = (arr) => {
+  let newNums = [];
   for (let num of arr) {
     newNums.push(num + 5);
   }
@@ -47,8 +47,12 @@ const addBonusPoints = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const addCurve = (arr) => {
-  // Solution code here...
-}
+  let curvedScores = [];
+  for (let score in arr) {
+    curvedScores.push(arr[score] * 1.05);
+  }
+  return curvedScores;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
