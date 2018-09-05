@@ -114,12 +114,19 @@ const addNumbers = (num, arr, times, callback) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeOne = (num, input) => {
-  // Solution code here...
-}
+  if (num % 3 === 2) {
+    input.pop();
+  } else {
+    return;
+  }
+};
 
 const removeElements = (input, callback) => {
-  // Solution code here...
-}
+  for(let element of input) {
+    callback(element, input);
+  }
+  return input;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
