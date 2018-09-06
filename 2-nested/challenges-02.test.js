@@ -52,7 +52,16 @@ const grandTotal = (hours, stores) => {
 // ------------------------------------------------------------------------------------------------
 
 const salesData = (data) => {
-  // Solution code here...
+  let Object = function (sales, time) {
+    this.sales = `${sales} cookies`;
+    this.time = time;
+  };
+  let arrayOfHourObjects = [];
+  data.forEach( (value, index) => {
+    let hourlyObject = new Object(value, hoursOpen[index]);
+    arrayOfHourObjects.push(hourlyObject);
+  });
+  return arrayOfHourObjects;
 };
 
 // ------------------------------------------------------------------------------------------------
