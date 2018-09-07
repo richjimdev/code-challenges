@@ -73,7 +73,18 @@ const battleship = (board, row, col) => {
 // ------------------------------------------------------------------------------------------------
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let total = 1;
+  numbers.forEach( num => {
+    let singleTotal = 1;
+    num.forEach( num2 => {
+      if ( num2 === '') {
+        return;
+      } else {
+        singleTotal = singleTotal * num2;
+      }});
+    total = total * singleTotal;
+  });
+  return total;
 };
 
 // ------------------------------------------------------------------------------------------------
