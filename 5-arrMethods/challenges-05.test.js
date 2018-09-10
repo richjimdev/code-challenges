@@ -47,9 +47,9 @@ const wordsToCharList = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const totalSumCSV = (input) => {
-  let total = 0;
-  // Solution code here...
-  return total;
+  let summer = input.split(',');
+  let summerInt = summer.map(Number);
+  return summerInt.reduce((a, b) => a + b, 0);
 };
 
 // ------------------------------------------------------------------------------------------------
