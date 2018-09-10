@@ -32,7 +32,11 @@ const howMuchPencil = (name) => {
 // ------------------------------------------------------------------------------------------------
 
 const wordsToCharList = (input) => {
-  // Solution code here...
+  const charListArr = [];
+  for (let i = 0; i < input.length; i++) {
+    charListArr.push(input.slice(i, i + 1));
+  }
+  return charListArr;
 };
 
 // ------------------------------------------------------------------------------------------------
