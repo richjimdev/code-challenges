@@ -96,9 +96,6 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-
-  //grab  indexOf() for the end of the mat. loop
-  // slice the rest into array
   for (let i = 0; i < recipe.ingredients.length; i++) {
     let startPoint = recipe.ingredients[i].indexOf(' ', 3);
     result.push(recipe.ingredients[i].slice(startPoint + 1));
@@ -135,8 +132,14 @@ const stepActions = (recipe) => {
 // ------------------------------------------------------------------------------------------------
 
 const splitFoods = (recipe) => {
+  let tempArr = [];
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    tempArr.push(recipe.ingredients[i].split(' '));
+    let sliced = tempArr[i].slice(2);
+    let joined = sliced.join(' ');
+    result.push(joined);
+  }
   return result;
 }
 
