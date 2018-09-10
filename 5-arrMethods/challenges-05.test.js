@@ -118,8 +118,12 @@ const listFoods = (recipe) => {
 // ------------------------------------------------------------------------------------------------
 
 const stepActions = (recipe) => {
+  let tempArr = [];
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < recipe.steps.length; i++) {
+    tempArr.push(recipe.steps[i].split(' '));
+    result.push(tempArr[i][0]);
+  }
   return result;
 }
 
