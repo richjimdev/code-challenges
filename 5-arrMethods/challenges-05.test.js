@@ -157,8 +157,19 @@ const splitFoods = (recipe) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeEvenValues = (input) => {
-  // Solution code here...
-};
+  // let arrTracker = [];
+  // input.forEach( (num, int) => {
+  //       if (input[num] % 2 === 0) {
+  //     arrTracker.push(num);
+  //   }
+  // })
+  // for (let num of input) {
+  //   if (input[num] % 2 === 0) {
+  //     arrTracker.push(num);
+  //   }
+  // }
+  // arrTracker.forEach( int => {input.splice(int, 1);});
+}
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
