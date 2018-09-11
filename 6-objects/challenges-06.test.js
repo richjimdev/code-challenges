@@ -110,7 +110,11 @@ let characters = [
 ]
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let result = [];
+  arr.forEach( char => {
+    result.push(getFrom(char, 'keys'));
+  });
+  return result.length;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -121,7 +125,11 @@ const totalCharacters = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const getHouses = (arr) => {
-  // Solution code here...
+  let result = [];
+  arr.forEach( char => {
+    result.push(getFrom(char, 'values')[3]);
+  });
+  return result;
 }
 
 // ------------------------------------------------------------------------------------------------
