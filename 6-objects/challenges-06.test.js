@@ -140,28 +140,17 @@ const getHouses = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const hasChildrenValues = (arr, character) => {
-  for(let i = 0; i < arr.length; i++) {
-    if(arr[i].name === character) {
-      if (arr[i].children.length === 0) {
+  let pplArr = getFrom(arr, 'values');
+
+  for(let i = 0; i < pplArr.length; i++) {
+    if(pplArr[i].name === character) {
+      if (pplArr[i].children.length === 0) {
         return false;
       } else {
         return true;
       }
     }
   }
-  // arr.forEach( char => {
-  //   if(char[character]){
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // });
-
-  // if (getFrom(arrcharacter, 'values')[2] === []) {
-  //   return false;
-  // } else {
-  //   return true;
-  // }
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -173,7 +162,17 @@ const hasChildrenValues = (arr, character) => {
 // ------------------------------------------------------------------------------------------------
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let pplArr = getFrom(arr, 'entries');
+
+  for(let i = 0; i < pplArr.length; i++) {
+    if(pplArr[i][1].name === character) {
+      if (pplArr[i][1].children.length === 0) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
 }
 
 // ------------------------------------------------------------------------------------------------
