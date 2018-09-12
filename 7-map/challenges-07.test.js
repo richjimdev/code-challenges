@@ -41,9 +41,7 @@ const forEachTwoToThe = (input) => {
 // instead of a for loop or forEach.
 // ------------------------------------------------------------------------------------------------
 
-const mapTwoToThe = (input) => {
-  return input.map( num => Math.pow(2, num));
-}
+const mapTwoToThe = input => input.map( num => Math.pow(2, num));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -56,9 +54,7 @@ const mapTwoToThe = (input) => {
 // For example: charCode(['h','i']) returns [104, 105].
 // ------------------------------------------------------------------------------------------------
 
-const charCode = (input) => {
-  // Solution code here...
-};
+const charCode = input => input.map( num =>  num.charCodeAt(0));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -72,7 +68,15 @@ const charCode = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const evenOdd = (input) => {
-  // Solution code here...
+  return input.map( num => {
+    if (num % 2 === 0) {
+      return 'even';
+    } else if (num % 2 === 1) {
+      return 'odd';
+    } else {
+      return 'N/A';
+    }
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
