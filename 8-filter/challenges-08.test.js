@@ -152,9 +152,7 @@ const characters = [
   },
 ];
 
-const getCharactersWithoutChildren = (input) => {
-  // Solution code here...
-};
+const getCharactersWithoutChildren = (input) => input.filter( char => !char.children);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 7
