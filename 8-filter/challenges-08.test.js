@@ -36,7 +36,9 @@ const filterStringsWithVowels = input => input.filter( x => x.match(/[aeiou]/i))
 // ------------------------------------------------------------------------------------------------
 
 const notInFirstArray = (forbiddenValues, input) => {
-  // Solution code here...
+  return input.filter( x => {
+    return !forbiddenValues.includes(x);
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
