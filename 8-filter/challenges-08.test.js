@@ -35,11 +35,7 @@ const filterStringsWithVowels = input => input.filter( x => x.match(/[aeiou]/i))
 // For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 // ------------------------------------------------------------------------------------------------
 
-const notInFirstArray = (forbiddenValues, input) => {
-  return input.filter( x => {
-    return !forbiddenValues.includes(x);
-  });
-};
+const notInFirstArray = (forbiddenValues, input) => input.filter( x => !forbiddenValues.includes(x));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
@@ -83,12 +79,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const getBaseStatGreaterThan = (input, minBaseStat) => {
-  return input.filter( obj => {
-    return obj.baseStat > minBaseStat;
-  });
-  // Solution code here...
-};
+const getBaseStatGreaterThan = (input, minBaseStat) => input.filter( obj => obj.baseStat > minBaseStat);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -164,13 +155,11 @@ const getCharactersWithoutChildren = (input) => input.filter( char => !char.chil
 // For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
 // ------------------------------------------------------------------------------------------------
 
-const evenOddNumericValues = (input) => {
-  return input.filter( thing => typeof thing === 'number').map( y => {
-    if (y % 2 === 0) return 'even';
-    return 'odd';
-  }
-  );
-};
+const evenOddNumericValues = (input) => input.filter( thing => typeof thing === 'number').map( y => {
+  if (y % 2 === 0) return 'even';
+  return 'odd';
+}
+);
 
 // ------------------------------------------------------------------------------------------------
 // TESTS
