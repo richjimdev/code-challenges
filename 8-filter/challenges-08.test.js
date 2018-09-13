@@ -100,9 +100,7 @@ const getBaseStatGreaterThan = (input, minBaseStat) => {
 // For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 // ------------------------------------------------------------------------------------------------
 
-const getStatName = (input, minBaseStat) => {
-  // Solution code here...
-};
+const getStatName = (input, minBaseStat) => input.filter( obj => obj.baseStat > minBaseStat).map( each => each.stat.name);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
