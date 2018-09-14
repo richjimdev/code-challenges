@@ -9,11 +9,7 @@
 // Note: You may not use the array's built-in length property.
 // ------------------------------------------------------------------------------------------------
 
-const countNumberOfElements = (input) => {
-  return input.reduce( (soFar, curr) => {
-    return (soFar - soFar) + curr;
-  });
-};
+const countNumberOfElements = input => input.reduce( (soFar, curr) => (soFar - soFar) + curr);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -66,12 +62,7 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (input) => {
-  return input.reduce( (soFar, curr) => {
-    if (curr.children) return soFar + curr.children.length;
-    return soFar;
-  }, 0);
-};
+const countNumberOfChildren = input => input.reduce( (soFar, curr) => curr.hasOwnProperty('children') ? soFar + curr.children.length : soFar, 0);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
@@ -128,11 +119,7 @@ const extractStat = (statName, input) => {
 // calculate the array's average value.
 // ------------------------------------------------------------------------------------------------
 
-const calculateAverage = (input) => {
-  return (input.reduce( (soFar, curr) => {
-    return soFar + curr;
-  }) / input.length);
-};
+const calculateAverage = (input) => (input.reduce( (soFar, curr) => soFar + curr) / input.length);
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
