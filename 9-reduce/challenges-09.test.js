@@ -129,7 +129,9 @@ const extractStat = (statName, input) => {
 // ------------------------------------------------------------------------------------------------
 
 const calculateAverage = (input) => {
-  // Solution code here...
+  return (input.reduce( (soFar, curr) => {
+    return soFar + curr;
+  }) / input.length);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -143,7 +145,16 @@ const calculateAverage = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const extractChildren = input => {
-  // Solution code here...
+  let filtered = input.filter( char => /a/g.test(char.name));
+  let final = [];
+  filtered.reduce( (soFar, curr) => {
+    if (soFar.children) {
+      soFar.children.forEach( child => final.push(child));
+      return curr;
+    }
+    return curr;
+  });
+  return final;
 };
 
 // ------------------------------------------------------------------------------------------------
