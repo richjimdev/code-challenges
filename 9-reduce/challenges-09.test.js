@@ -259,7 +259,9 @@ let starWarsData = [{
 }]
 
 const returnNames = (data) => {
-  // Solution code here...
+  let result = [];
+  data.reduce( (soFar, curr) => result.push(curr.name), 0);
+  return result;
 };
 
 // ------------------------------------------------------------------------------------------------
