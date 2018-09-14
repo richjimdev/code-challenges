@@ -191,8 +191,15 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (input) => {
-  // Solution code here...
-}
+  let count = 0;
+  input.reduce( (soFar, curr) => {
+    if (isPrime(curr)) {
+      count++;
+      return curr;
+    } return curr;
+  }, 0);
+  return count;
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
