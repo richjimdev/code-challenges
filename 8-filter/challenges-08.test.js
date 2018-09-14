@@ -9,7 +9,12 @@
 // For example, oddValues([1,2,3]) returns [1,3].
 // ------------------------------------------------------------------------------------------------
 
-const oddValues = input => input.filter(num => num % 2 !== 0);
+// const oddValues = input => input.filter(num => num % 2 !== 0);
+const oddValues = (input) => {
+  return myFilter(input, (item, i) => {
+    if(item % 2 !== 0) return true;
+  });
+};
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -161,7 +166,16 @@ const evenOddNumericValues = (input) => input.filter( thing => typeof thing === 
 }
 );
 
-// ------------------------------------------------------------------------------------------------
+// STRETCH
+function myFilter(arr, callback) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) result.push(arr[i]);
+  }
+  return result;
+}
+
+//------------------------------------------------------------------------------------------------
 // TESTS
 //
 // All the code below will verify that your functions are working to solve the challenges.
