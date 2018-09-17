@@ -32,7 +32,9 @@ const count = (target, input) => {
 // ------------------------------------------------------------------------------------------------
 
 const totalSum = (input) => {
-  // Solution code here...
+  return input.reduce( (soFar, curr) => {
+    return soFar + curr.reduce( (sf2, curr2) => sf2 + curr2, 0);
+  }, 0);
 };
 
 // ------------------------------------------------------------------------------------------------
