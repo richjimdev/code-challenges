@@ -50,7 +50,7 @@ const totalSum = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  return input.map( x => x.filter( y => y % 5 === 0 && typeof(y) === 'number')).map( z => z.map( a =>  Math.pow(2, a)));
 };
 
 // ------------------------------------------------------------------------------------------------
