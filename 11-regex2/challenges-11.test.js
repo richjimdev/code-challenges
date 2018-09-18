@@ -24,7 +24,10 @@ const validatePin = (pin) => {
 // ------------------------------------------------------------------------------------------------
 
 const findTagNames = elements => {
-  // Solution code here...
+  let tester = /\/\w+/g;
+  return elements.reduce( (acc, cur) => {
+    return acc.concat(cur.match(tester));
+  }, []);
 }
 
 // ------------------------------------------------------------------------------------------------
