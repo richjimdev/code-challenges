@@ -46,9 +46,11 @@ const findTagNames = elements => {
 // Note: if you ever need to validate an email using a regex in practice, the Internet has the actual
 // regex you should use. It's many many lines long.
 // ------------------------------------------------------------------------------------------------
+// one word . maybe one word (numbers ok) @ .net .com .org (no special chars) end on it.
 
 const validateEmail = (email) => {
-  // Solution code here...
+  const myRegEx = /^\w+(\.\w+)?@\w+\.(com|net|org)$/;
+  return myRegEx.test(email);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -73,7 +75,8 @@ const validateEmail = (email) => {
 // ------------------------------------------------------------------------------------------------
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  const numRegEx = /^\(?\d\d\d\)?[ -]?\d\d\d[ -]?\d\d\d\d$/;
+  return numRegEx.test(phoneNumber);
 };
 
 
