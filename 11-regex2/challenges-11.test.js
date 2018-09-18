@@ -75,7 +75,8 @@ const validateEmail = (email) => {
 // ------------------------------------------------------------------------------------------------
 
 const validatePhoneNumber = (phoneNumber) => {
-  const numRegEx = /^\(?\d\d\d\)?[ -]?\d\d\d[ -]?\d\d\d\d$/;
+  // const numRegEx = /^\(?\d\d\d\)?[ -]?\d\d\d[ -]?\d\d\d\d$/;
+  const numRegEx = /^(\(\d\d\d\)|\d\d\d)[ -]?\d\d\d[ -]?\d\d\d\d$/;
   return numRegEx.test(phoneNumber);
 };
 
