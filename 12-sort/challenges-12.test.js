@@ -51,7 +51,13 @@ const sortByLength = (strings) => {
 
 const alphabetizeBetter = (strs) => {
   return strs.sort( (a, b) => {
-    return b.toLowerCase - a.toLowerCase;
+    if (a.toLowerCase() > b.toLowerCase()) {
+      return 1;
+    } else if (a.toLowerCase() < b.toLowerCase()) {
+      return -1;
+    } else {
+      return 0;
+    }
   });
 };
 
