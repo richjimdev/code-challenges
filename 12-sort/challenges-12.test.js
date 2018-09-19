@@ -184,8 +184,20 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
+var daySort = {
+  "Monday": 1,
+  "Tuesday": 2,
+  "Wednesday": 3,
+  "Thursday": 4,
+  "Friday": 5,
+  "Saturday": 6,
+  "Sunday": 7
+};
+
 const sortMeetingsByDay = (meetings) => {
-  // Solution code here...
+  return meetings.sort( (a, b) => {
+    return daySort[a.dayOfWeek] - daySort[b.dayOfWeek];
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
