@@ -91,7 +91,9 @@ const sortByPrice = (objs) => {
 // ------------------------------------------------------------------------------------------------
 
 const sortNumbersByLength = (nums) => {
-  // Solution code here...
+  return nums.sort( (a, b) => {
+    return a.toString().length - b.toString().length;
+  });
 };
 
 // -----------------------------------------------------------------------------------------------
