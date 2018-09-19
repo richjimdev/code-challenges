@@ -210,7 +210,17 @@ const sortMeetingsByDay = (meetings) => {
 // ------------------------------------------------------------------------------------------------
 
 const sortSchedule = (meetings) => {
-  // Solution code here...
+  return meetings.sort( (a, b) => {
+    if (daySort[a.dayOfWeek] === daySort[b.dayOfWeek]) {
+      if (a.start === b.start) {
+        return (a.end - a.start) - (b.end - b.start);
+      } else {
+        return a.start - b.start;
+      }
+    } else {
+      return daySort[a.dayOfWeek] - daySort[b.dayOfWeek];
+    }
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
