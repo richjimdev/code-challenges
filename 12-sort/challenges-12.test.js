@@ -125,11 +125,7 @@ const sortPeople = (people) => {
     } else {
       return 0;
     }
-  })
-
-  // return people.sort( (a, b) => {
-  //   return a.lastName - b.lastName;
-  // });
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -144,7 +140,23 @@ const sortPeople = (people) => {
 // ------------------------------------------------------------------------------------------------
 
 const sortPeopleBetter = (people) => {
-  // Solution code here...
+  return people.sort ( (a , b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    } else if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      if (a.firstName === b.firstName) {
+        return a.age - b.age;
+      } else if (a.firstName > b.firstName) {
+        return 1;
+      } else if (a.firstName < b.firstName) {
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
