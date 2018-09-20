@@ -213,7 +213,20 @@ const excel = (str) => {
 // ------------------------------------------------------------------------------------------------
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  function compilePLayerScores(board, player) {
+    let checker = [0, 0, 0, 0];
+    for (let i = 0; i < 3; i++) {
+      if (board[i][i] === player) checker[0]++; // diag forward
+      if (board[i][2 - i] === player) checker[1]++; // diag back
+      for (let j = 0; j < 3; j++) {
+        if (board[j][i] === player) checker[2]++; // horizontal
+        if (board [i][j] === player) checker[3]++; // vertical
+      }
+      if (checker.includes(3)) { break; } else { checker.fill(0, 2); }
+    }
+    return checker.includes(3);
+  }
+  return compilePLayerScores(board, 'X') || compilePLayerScores(board, 'O');
 };
 
 // ------------------------------------------------------------------------------------------------
