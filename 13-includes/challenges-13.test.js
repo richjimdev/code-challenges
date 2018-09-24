@@ -104,7 +104,7 @@ const allAnything = (strs, target) => {
 // ------------------------------------------------------------------------------------------------
 
 const unenrollBrook = (roster) => {
-  // Solution code here...
+  return roster.map( each => each.filter( student => !/brook/i.test(student)));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -125,9 +125,9 @@ const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sat
 const sortByDay = (eventStrings) => {
   return daysOfWeek.map( day => {
     return eventStrings.filter(event => {
-     return event.includes(day);
-    })
-  })
+      return event.includes(day);
+    });
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
