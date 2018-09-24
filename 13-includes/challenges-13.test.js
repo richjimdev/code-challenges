@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------------------------
 
 const firstLetters = (strs) => {
-  // Solution code here...
+  return strs.map( string => string[0]);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ const firstLetters = (strs) => {
 // ------------------------------------------------------------------------------------------------
 
 const findHappiness = (strs) => {
-  // Solution code here...
+  return strs.filter( string => /:\)/.test(string));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -119,7 +119,11 @@ const unenrollBrook = (roster) => {
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (eventStrings) => {
-  // Solution code here...
+  return daysOfWeek.map( day => {
+    return eventStrings.filter(event => {
+     return event.includes(day);
+    })
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
